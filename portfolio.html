@@ -21,26 +21,31 @@
   <body>
     <!-- Шапка -->
     <header class="box">
-      <div class="container nav-list">
-        <nav class="nav-list">
+      <div class="container page-header-container">
+        <nav class="nav-list-container">
           <a href="./index.html" class="logo-accent no-decor"
             ><span class="logo">Web</span> studio</a
           >
           <ul class="list list-nav">
             <li class="item-nav">
-              <a href="./index.html" class="link-nav no-decor">Studio</a>
+              <a href="./index.html" class="link-nav no-decor"
+                >Studio</a
+              >
             </li>
             <li class="item-nav">
-              <a href="./portfolio.html" class="link-nav no-decor current"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="link-nav no-decor current">Portfolio</a>
             </li>
             <li class="item-nav">
               <a href="" class="link-nav no-decor">Contacts</a>
             </li>
           </ul>
         </nav>
-        <ul class="list nav-list">
+        <button type="button" class="mobile-menu-open">
+          <svg width="32" height="22" class="mobile-menu-open-icon">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <ul class="list contact-list">
           <li class="contact-item">
             <a href="mailto:info@devstudio" class="contact-link no-decor"
               >info@devstudio</a
