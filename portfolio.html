@@ -28,19 +28,19 @@
           >
           <ul class="list list-nav">
             <li class="item-nav">
-              <a href="./index.html" class="link-nav no-decor"
-                >Studio</a
-              >
+              <a href="./index.html" class="link-nav no-decor">Studio</a>
             </li>
             <li class="item-nav">
-              <a href="./portfolio.html" class="link-nav no-decor current">Portfolio</a>
+              <a href="./portfolio.html" class="link-nav no-decor current"
+                >Portfolio</a
+              >
             </li>
             <li class="item-nav">
               <a href="" class="link-nav no-decor">Contacts</a>
             </li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu-open">
+        <button type="button" class="mobile-menu-open" data-menu-open>
           <svg width="32" height="22" class="mobile-menu-open-icon">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -57,6 +57,78 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-menu-close-btn" data-menu-close>
+            <svg class="mobile-menu-close-icon" width="8" hight="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-menu-nav">
+            <li class="mobile-menu-item-nav">
+              <a href="./index.html" class="mobile-menu-link-nav no-decor"
+                >Studio</a
+              >
+            </li>
+            <li class="mobile-menu-item-nav">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu-link-nav no-decor current"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-menu-item-nav">
+              <a href="" class="mobile-menu-link-nav no-decor">Contacts</a>
+            </li>
+          </ul>
+          <ul class="list mobile-menu-contact-list">
+            <li class="mobile-menu-contact-item">
+              <a
+                href="tel:+11(000)111-11-11"
+                class="mobile-menu-contact-phone no-decor"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-menu-contact-item">
+              <a
+                href="mailto:info@devstudio"
+                class="mobile-menu-contact-email no-decor"
+                >info@devstudio</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-social-list list">
+            <li class="mobile-menu-social-item">
+              <a href="#" class="mobile-menu-social-link">
+                <svg width="24" height="24" class="mobile-menu-social-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a href="#" class="mobile-menu-social-link">
+                <svg width="24" height="24" class="mobile-menu-social-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a href="#" class="mobile-menu-social-link">
+                <svg width="24" height="24" class="mobile-menu-social-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a href="#" class="mobile-menu-social-link">
+                <svg width="24" height="24" class="mobile-menu-social-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -107,8 +179,10 @@
                 </div>
 
                 <div class="examples-descr">
-                  <h3 class="subtitle">Banking App Interface Concept</h3>
-                  <p class="text">App</p>
+                  <h3 class="examples-subtitle">
+                    Banking App Interface Concept
+                  </h3>
+                  <p class="examples-text">App</p>
                 </div></a
               >
             </li>
@@ -134,8 +208,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Cashless Payment</h3>
-                  <p class="text">Marketing</p>
+                  <h3 class="examples-subtitle">Cashless Payment</h3>
+                  <p class="examples-text">Marketing</p>
                 </div></a
               >
             </li>
@@ -161,8 +235,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Meditaion App</h3>
-                  <p class="text">App</p>
+                  <h3 class="examples-subtitle">Meditaion App</h3>
+                  <p class="examples-text">App</p>
                 </div></a
               >
             </li>
@@ -188,8 +262,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Taxi Service</h3>
-                  <p class="text">Marketing</p>
+                  <h3 class="examples-subtitle">Taxi Service</h3>
+                  <p class="examples-text">Marketing</p>
                 </div></a
               >
             </li>
@@ -215,8 +289,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Screen Illustrations</h3>
-                  <p class="text">Design</p>
+                  <h3 class="examples-subtitle">Screen Illustrations</h3>
+                  <p class="examples-text">Design</p>
                 </div></a
               >
             </li>
@@ -242,8 +316,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Online Courses</h3>
-                  <p class="text">Marketing</p>
+                  <h3 class="examples-subtitle">Online Courses</h3>
+                  <p class="examples-text">Marketing</p>
                 </div></a
               >
             </li>
@@ -269,8 +343,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Instagram Stories Concept</h3>
-                  <p class="text">Design</p>
+                  <h3 class="examples-subtitle">Instagram Stories Concept</h3>
+                  <p class="examples-text">Design</p>
                 </div></a
               >
             </li>
@@ -296,8 +370,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Organic Food</h3>
-                  <p class="text">Web Site</p>
+                  <h3 class="examples-subtitle">Organic Food</h3>
+                  <p class="examples-text">Web Site</p>
                 </div></a
               >
             </li>
@@ -323,8 +397,8 @@
                   </p>
                 </div>
                 <div class="examples-descr">
-                  <h3 class="subtitle">Fresh Coffee</h3>
-                  <p class="text">Web Site</p>
+                  <h3 class="examples-subtitle">Fresh Coffee</h3>
+                  <p class="examples-text">Web Site</p>
                 </div></a
               >
             </li>
@@ -334,48 +408,50 @@
     </main>
     <!-- Футер -->
     <footer class="footer">
-      <div class="container footer-wrap">
-        <div class="wrapper">
-          <a href="./" class="logo-accent-white no-decor"
-            ><span class="logo">Web</span> studio</a
-          >
-          <p class="text-white">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="company-social">
-          <h3 class="company-social-title">Social media</h3>
-          <ul class="company-social-list list">
-            <li class="company-social-item">
-              <a href="#" class="company-social-link">
-                <svg width="24" height="24" class="company-social-icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="company-social-item">
-              <a href="#" class="company-social-link">
-                <svg width="24" height="24" class="company-social-icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="company-social-item">
-              <a href="#" class="company-social-link">
-                <svg width="24" height="24" class="company-social-icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="company-social-item">
-              <a href="#" class="company-social-link">
-                <svg width="24" height="24" class="company-social-icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <div class="container wrap">
+        <div class="footer-wrap">
+          <div class="wrapper">
+            <a href="./" class="logo-accent-white no-decor"
+              ><span class="logo">Web</span> studio</a
+            >
+            <p class="text-white">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+          <div class="company-social">
+            <h3 class="company-social-title">Social media</h3>
+            <ul class="company-social-list list">
+              <li class="company-social-item">
+                <a href="#" class="company-social-link">
+                  <svg width="24" height="24" class="company-social-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="company-social-item">
+                <a href="#" class="company-social-link">
+                  <svg width="24" height="24" class="company-social-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="company-social-item">
+                <a href="#" class="company-social-link">
+                  <svg width="24" height="24" class="company-social-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="company-social-item">
+                <a href="#" class="company-social-link">
+                  <svg width="24" height="24" class="company-social-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <form class="subscribe-form">
           <label class="subscribe-form-field">
@@ -397,5 +473,6 @@
         </form>
       </div>
     </footer>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
