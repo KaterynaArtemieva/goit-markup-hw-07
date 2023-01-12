@@ -76,6 +76,7 @@ button {
   .contact-list {
     display: none;
   }
+
   .mobile-menu-open {
     border: none;
     background-color: transparent;
@@ -85,6 +86,123 @@ button {
   .mobile-menu-open-icon {
     stroke: currentColor;
   }
+  .mobile-menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--timing-duration) var(--timing-function), visability var(--timing-duration) var(--timing-function);
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  }
+  .mobile-menu-container{
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+  }
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: var(--cornflover-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    line-height: 1;
+    transition: background-color var(--timing-duration) var(--timing-function), fill var(--timing-duration) var(--timing-function);
+  
+  
+  }
+  .mobile-menu-close-btn:active {
+    background-color: var(--last-accent-color);
+    fill: var(--white-color);
+    border: none;
+  }
+  .mobile-menu-nav{
+    margin-bottom: 284px;
+  }
+  .mobile-menu-item-nav{
+    margin-bottom: 40px;
+  }
+  .mobile-menu-item-nav:last-child {
+    margin-bottom: 0;
+
+  }
+.mobile-menu-link-nav {
+  padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+}
+.mobile-menu-contact-item:last-child{
+  margin-top: 40px;
+}
+.mobile-menu-contact-phone{
+
+  font-weight: 600;
+font-size: 36px;
+line-height: 1.11;
+text-transform: capitalize;
+color: var(--accent-color);
+}
+.mobile-menu-contact-email {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: var(--second-color);}
+.mobile-menu-contact-list{
+  margin-bottom: 48px;
+}
+.mobile-menu-social-list {
+  display: flex;
+  justify-content: flex-start;
+}
+.mobile-menu-social-item {
+  margin-right: 56px;
+}
+.mobile-menu-social-item:last-child {
+  margin-right: 0;
+
+}
+.mobile-menu-social-link {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transition: background-color var(--timing-duration) var(--timing-function);
+}
+.mobile-menu-social-icon {
+  fill: var(--cloud-color);
+}
+
+
 }
 
 .page-header-container {
@@ -103,9 +221,7 @@ button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
-  display: flex;
-  align-items: center;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -119,7 +235,7 @@ button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.17;
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
@@ -185,20 +301,23 @@ button {
 .current {
   color: var(--accent-color);
 }
-.current::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateY(14px);
-
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--last-accent-color);
-  border-radius: 2px;
+@media screen and (min-width:768px) {
+  .current::before {
+    content: "";
+  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(14px);
+  
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--last-accent-color);
+    border-radius: 2px;
+  }
 }
+
 .contact-link {
   padding-top: 10px;
   padding-right: 10px;
@@ -232,6 +351,9 @@ button {
     letter-spacing: 0.02em;
   }
 }
+
+
+
 
 /* Герой */
 .hero {
@@ -645,11 +767,7 @@ button {
   padding-top: 96px;
   padding-bottom: 96px;
 }
-.footer-wrap {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: baseline; */
-}
+
 .logo-accent-white {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -657,12 +775,13 @@ button {
   line-height: 1.17;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--cloud-color);
 }
 .text-white {
-  margin-top: 16px;
   max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
@@ -670,14 +789,18 @@ button {
   color: var(--cornflover-color);
 }
 .wrapper {
-  margin-right: 120px;
+  padding-left: 64px;
+  padding-right: 64px;
+  margin-bottom: 72px;
+  /* margin-right: 120px; */
 }
 .company-social {
-  margin-right: 80px;
+  /* margin-right: 80px; */
 }
 .company-social-title {
   margin-bottom: 16px;
-  font-weight: 600;
+  text-align: center;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -686,6 +809,8 @@ button {
 }
 .company-social-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 .company-social-item {
   margin-right: 16px;
@@ -711,14 +836,11 @@ button {
 .company-social-icon {
   fill: currentColor;
 }
-.subscribe-form {
-  display: flex;
-  align-items: flex-end;
-}
-.subscribe-form-field {
-}
+
 .subscribe-form-input-descr {
   display: block;
+
+  text-align: center;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -729,7 +851,7 @@ button {
   color: var(--white-color);
 }
 .subscribe-form-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
   background-color: transparent;
@@ -745,9 +867,11 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe-form-submit {
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   padding: 8px 24px 8px 24px;
   background: var(--accent-color);
   border-radius: 4px;
@@ -776,6 +900,69 @@ button {
 }
 .subscribe-form-send-icon {
   fill: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    margin-bottom: 72px;
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+  }
+  .logo-accent-white {
+    justify-content: flex-start;
+  }
+  .wrapper {
+    margin-right: 24px;
+    padding-left: 92px;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  .company-social-list {
+    margin-bottom: 0;
+  }
+  .company-social-title {
+    text-align: left;
+  }
+  .subscribe-form {
+    padding-left: 92px;
+  }
+  .subscribe-form-input-descr {
+    text-align: left;
+  }
+  .subscribe-form-input {
+    width: 264px;
+  }
+  .subscribe-form {
+    display: flex;
+    align-items: flex-end;
+  }
+  .subscribe-form-submit {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 24px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .container.wrap {
+    display: flex;
+  }
+  .footer-wrap {
+    margin-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  margin-bottom: 0;}
+  .wrapper{
+    margin-right: 120px;
+    padding-left: 0;
+  }
+  .subscribe-form {
+align-items: flex-start;  
+padding-left: 0;
+}
+
+.subscribe-form-submit {
+  margin-top: 40px;}
 }
 
 /* Страница портфолио */
@@ -908,13 +1095,18 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  height: 584px;
+  max-width: 392px;
+  height: 586px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
+}
+@media screen and (min-width:768px) {
+  .modal {
+    width: 408px;
+  }
 }
 .modal-close-btn {
   position: absolute;
@@ -930,6 +1122,8 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   line-height: 1;
+  transition: background-color var(--timing-duration) var(--timing-function), fill var(--timing-duration) var(--timing-function);
+
 }
 .modal-close-btn:active {
   background-color: var(--last-accent-color);

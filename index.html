@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Шапка -->
-    <!-- <header class="box">
+    <header class="box">
       <div class="container page-header-container">
         <nav class="nav-list-container">
           <a href="./index.html" class="logo-accent no-decor"
@@ -42,7 +42,7 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu-open">
+        <button type="button" class="mobile-menu-open" data-menu-open>
           <svg width="32" height="22" class="mobile-menu-open-icon">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -60,10 +60,75 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+        <button type="button" class="mobile-menu-close-btn" data-menu-close>
+          <svg class="mobile-menu-close-icon" width="8" hight="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+
+          </svg>
+        </button>
+        <ul class="list mobile-menu-nav">
+          <li class="mobile-menu-item-nav">
+            <a href="./index.html" class="mobile-menu-link-nav no-decor current"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item-nav">
+            <a href="./portfolio.html" class="mobile-menu-link-nav no-decor">Portfolio</a>
+          </li>
+          <li class="mobile-menu-item-nav">
+            <a href="" class="mobile-menu-link-nav no-decor">Contacts</a>
+          </li>
+        </ul>
+        <ul class="list mobile-menu-contact-list">
+          <li class="mobile-menu-contact-item">
+            <a href="tel:+11(000)111-11-11" class="mobile-menu-contact-phone no-decor"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mobile-menu-contact-item">
+            <a href="mailto:info@devstudio" class="mobile-menu-contact-email no-decor"
+              >info@devstudio</a
+            >
+          </li>
+          
+        </ul>
+        <ul class="mobile-menu-social-list list">
+          <li class="mobile-menu-social-item">
+            <a href="#" class="mobile-menu-social-link">
+              <svg width="24" height="24" class="mobile-menu-social-icon">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a href="#" class="mobile-menu-social-link">
+              <svg width="24" height="24" class="mobile-menu-social-icon">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a href="#" class="mobile-menu-social-link">
+              <svg width="24" height="24" class="mobile-menu-social-icon">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a href="#" class="mobile-menu-social-link">
+              <svg width="24" height="24" class="mobile-menu-social-icon">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul></div>
+      </div>
+    </header>
     <main>
       <!-- Герой -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">
             Effective Solutions<br />
@@ -73,9 +138,9 @@
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
       <!-- Преимущества -->
-      <!-- <section class="dignity">
+      <section class="dignity">
         <div class="container">
           <h2 hidden>Dignity</h2>
           <ul class="dignity-list list">
@@ -129,9 +194,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Продукт -->
-      <!-- <section class="product">
+      <section class="product">
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="list image-list">
@@ -164,9 +229,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Команда -->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="list team-list">
@@ -342,9 +407,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Клиенты -->
-      <!-- <section class="client">
+      <section class="client">
         <div class="container">
           <h2 class="client-title">Customers</h2>
           <ul class="client-list list">
@@ -392,11 +457,12 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- Футер -->
     <footer class="footer">
-      <div class="container footer-wrap">
+      <div class="container wrap">
+      <div class="footer-wrap">
         <div class="wrapper">
           <a href="./" class="logo-accent-white no-decor"
             ><span class="logo">Web</span> studio</a
@@ -439,28 +505,28 @@
             </li>
           </ul>
         </div>
-        <form class="subscribe-form">
-          <label class="subscribe-form-field">
-            <span class="subscribe-form-input-descr">Subscribe</span>
-            <input
-              class="subscribe-form-input"
-              type="email"
-              name="user_email"
-              required
-              placeholder="E-mail"
-            />
-          </label>
-          <button class="subscribe-form-submit" type="submit">
-            <span class="subscribe-form-submit-descr">Subscribe</span>
-            <svg class="subscribe-form-send-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
       </div>
+      <form class=" subscribe-form">
+        <label class="subscribe-form-field">
+          <span class="subscribe-form-input-descr">Subscribe</span>
+          <input
+            class="subscribe-form-input"
+            type="email"
+            name="user_email"
+            required
+            placeholder="E-mail"
+          />
+        </label>
+        <button class="subscribe-form-submit" type="submit">
+          <span class="subscribe-form-submit-descr">Subscribe</span>
+          <svg class="subscribe-form-send-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+        </button>
+      </form></div>
     </footer>
     <!-- Модальне вікно -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-btn-icon" width="8" height="8">
@@ -537,7 +603,8 @@
           <button type="submit" class="modal-form-submit">Send</button>
         </form>
       </div>
-    </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
+    </div>
+    <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
