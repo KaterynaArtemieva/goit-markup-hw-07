@@ -337,19 +337,25 @@ button {
 /* Герой */
 
 .hero {
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office-bkg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
-  background-color: #434455;
+  background-size: cover;
   margin: 0 auto;
   max-width: 1440px;
   padding-top: 112px;
   padding-bottom: 112px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/people-office-bkg@2x.jpg);
+  }
 }
 .hero-title {
   margin-bottom: 72px;
@@ -1112,7 +1118,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 392px;
+  width: 392px;
   height: 586px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
